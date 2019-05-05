@@ -1,7 +1,10 @@
-package law.mc_mod.proxy;
+package law.gwk_tweaks.proxy;
 
+import law.gwk_tweaks.ModBlocks;
+import law.gwk_tweaks.blocks.GBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -19,7 +22,7 @@ public class CommonProxy {
     public void preInit(FMLPreInitializationEvent e) {
 
         File directory = e.getModConfigurationDirectory();
-        config = new Configuration(new File(directory.getPath(), "MC_MOD.cfg"));
+        config = new Configuration(new File(directory.getPath(), "gwk_tweaks.cfg"));
         Config.readConfig();
     }
 
@@ -36,9 +39,11 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
+        event.getRegistry().register(new GBlock());
     }
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
+        event.getRegistry().register(new ItemBlock(ModBlocks.gBlock).setRegistryName(ModBlocks.gBlock.getRegistryName()));
     }
 }

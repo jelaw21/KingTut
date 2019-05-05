@@ -1,6 +1,6 @@
-package law.mc_mod.proxy;
+package law.gwk_tweaks.proxy;
 
-import law.mc_mod.MC_MOD;
+import law.gwk_tweaks.GWKTweaks;
 import net.minecraftforge.common.config.Configuration;
 import org.apache.logging.log4j.Level;
 
@@ -20,7 +20,7 @@ public class Config {
             initGeneralConfig(cfg);
             initDimensionConfig(cfg);
         }catch(Exception e1){
-            MC_MOD.logger.log(Level.ERROR, "Problem Loading config file!", e1);
+            GWKTweaks.logger.log(Level.ERROR, "Problem Loading config file!", e1);
         }finally{
             if(cfg.hasChanged()){
                 cfg.save();

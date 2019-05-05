@@ -1,13 +1,13 @@
 [
     {
-        "modid": "MC_MOD",
-        "name": "MC_MOD",
-        "description": "",
+        "modid": "gwk_tweaks",
+        "name": "GWK Tweaks",
+        "description": "Adds a few community blocks",
         "version": "${version}",
         "mcversion": "${mcversion}",
         "url": "",
         "updateUrl": "",
-        "authorList": [],
+        "authorList": ["Law"],
         "credits": "",
         "logoFile": "",
         "screenshots": [],

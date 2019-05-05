@@ -1,4 +1,4 @@
-package law.mc_mod.proxy;
+package law.gwk_tweaks.proxy;
 
 public class ServerProxy extends CommonProxy {
 
